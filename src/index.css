@@ -1,0 +1,208 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #f1f5f9;
+    --card-bg: #ffffff;
+    --neu-light: #ffffff;
+    --neu-dark: #cbd5e1;
+    --text-primary: #0f172a;
+    --text-muted: #334155;
+  }
+
+  body {
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 50%, #f8fafc 100%);
+    color: #0f172a;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Force dark contrast for standard form elements */
+  input, select, textarea {
+    color: #0f172a !important;
+    font-weight: 600;
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: #64748b !important;
+    font-weight: 500;
+  }
+}
+
+/* Claymorphism & Soft Neumorphism */
+.clay-card {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  box-shadow: 
+    8px 8px 20px rgba(160, 175, 195, 0.4),
+    -8px -8px 20px rgba(255, 255, 255, 0.98),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.9);
+  border: 1px solid #cbd5e1;
+}
+
+/* Special Dark Clay Hero Card (Exactly matching the reference image) */
+.clay-hero-dark {
+  background: linear-gradient(135deg, #090d16 0%, #0d1527 50%, #111a33 100%) !important;
+  border-radius: 1.5rem;
+  box-shadow: 
+    0 20px 35px -10px rgba(15, 23, 42, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+}
+
+.clay-card-pill {
+  background: #ffffff;
+  border-radius: 2rem;
+  box-shadow: 
+    6px 6px 16px rgba(160, 175, 195, 0.35),
+    -6px -6px 16px rgba(255, 255, 255, 0.98),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.9);
+  border: 1px solid #cbd5e1;
+}
+
+.clay-card-sm {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  box-shadow: 
+    4px 4px 10px rgba(160, 175, 195, 0.3),
+    -4px -4px 10px rgba(255, 255, 255, 0.95),
+    inset 1px 1px 1.5px rgba(255, 255, 255, 0.9);
+  border: 1px solid #cbd5e1;
+}
+
+/* BUTTONS with Fine Crisp Border Lines */
+.clay-btn {
+  background: #f8fafc;
+  color: #0f172a !important;
+  font-weight: 700;
+  box-shadow: 
+    4px 4px 10px rgba(160, 175, 195, 0.35),
+    -4px -4px 10px rgba(255, 255, 255, 0.95);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #94a3b8;
+}
+
+.clay-btn:hover {
+  transform: translateY(-1.5px);
+  background: #ffffff;
+  border-color: #64748b;
+  box-shadow: 
+    6px 6px 14px rgba(160, 175, 195, 0.45),
+    -6px -6px 14px rgba(255, 255, 255, 0.98);
+}
+
+.clay-btn:active {
+  transform: translateY(1px);
+  box-shadow: 
+    inset 3px 3px 6px rgba(160, 175, 195, 0.4),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.8);
+}
+
+.clay-btn-active {
+  background: #ffffff;
+  color: #1e1b4b !important;
+  box-shadow: 
+    inset 3px 3px 7px rgba(160, 175, 195, 0.35),
+    inset -3px -3px 7px rgba(255, 255, 255, 0.95);
+  border: 1.5px solid #6366f1;
+}
+
+/* 3D Circular Badges */
+.clay-badge-green {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 
+    3px 4px 8px rgba(22, 163, 74, 0.4),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 4px rgba(20, 83, 45, 0.5);
+}
+
+.clay-badge-red {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 
+    3px 4px 8px rgba(220, 38, 38, 0.4),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 4px rgba(153, 27, 27, 0.5);
+}
+
+.clay-badge-orange {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 
+    3px 4px 8px rgba(217, 119, 6, 0.4),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 4px rgba(146, 64, 14, 0.5);
+}
+
+.clay-badge-blue {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 
+    3px 4px 8px rgba(37, 99, 235, 0.4),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 4px rgba(30, 64, 175, 0.5);
+}
+
+/* Inset Soft Input with fine border */
+.clay-input {
+  background: #f8fafc;
+  color: #0f172a !important;
+  box-shadow: 
+    inset 2px 2px 5px rgba(160, 175, 195, 0.3),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.95);
+  border: 1px solid #94a3b8;
+  border-radius: 1rem;
+}
+
+.clay-input:focus {
+  outline: none;
+  background: #ffffff;
+  border-color: #4f46e5;
+  box-shadow: 
+    inset 1px 1px 3px rgba(160, 175, 195, 0.2),
+    0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* Phone Frame Styles */
+.phone-outer-frame {
+  background: #0f172a;
+  border-radius: 3.5rem;
+  padding: 12px;
+  box-shadow: 
+    0 25px 50px -12px rgba(15, 23, 42, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.15),
+    0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.phone-inner-screen {
+  background: linear-gradient(170deg, #f1f5f9 0%, #e2e8f0 40%, #f8fafc 100%);
+  border-radius: 3rem;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(203, 213, 225, 0.6);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
